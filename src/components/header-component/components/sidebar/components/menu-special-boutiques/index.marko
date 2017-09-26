@@ -1,0 +1,40 @@
+class {
+  onCreate(){
+    var tabs = this.buildTabs();
+    this.state = {
+      tabs: tabs,
+      selectedTab: tabs[0]
+    }
+  }
+
+  buildTabs(){
+    var tabs = [];
+    for(var x = 0, len = 3; x < len; x++){
+      tabs.push({
+        title: 'Tab-' + x,
+        contents: [
+          'Giyim-' + x,
+          'Çocuk-' + x,
+          'Blabla-' + x,
+          'Test-' + x
+        ]
+      });
+    }
+    return tabs;
+  }
+
+  selectTab(tab){
+    this.state.selectedTab = tab;
+  }
+}
+<div>
+  <menu-section>
+    <@title>Özel Butikler</@title>
+    <@tabs>
+      <div for(tab in state.tabs) on-click('selectTab', tab)>${tab.title}</div>
+    </@tabs>
+    <@content>
+      <div for(tabItem in state.selectedTab.contents)>${tabItem}</div>
+    </@content>
+  </menu-section>
+</div>

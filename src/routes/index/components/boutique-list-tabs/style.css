@@ -1,0 +1,26 @@
+.category-menu{
+  height: 44px;
+  margin: 0;
+  padding: 10px 0;
+  overflow-x: scroll;
+  clear: both;
+  box-sizing: border-box;
+}
+
+.category-menu ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  width: max-content;
+  height: 100%;
+  display: inline-block;
+}
+
+.category-menu ::-webkit-scrollbar {
+  display: none;
+}
+
+.category-menu ul li{
+  display: inline;
+  margin: 10px;
+}

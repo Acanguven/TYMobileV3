@@ -1,0 +1,8 @@
+.menuContent{
+  background-color: #f8f8f8;
+  position: fixed;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 45px);
+}

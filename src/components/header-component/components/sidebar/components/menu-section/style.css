@@ -1,0 +1,43 @@
+.menu-section {
+  margin-top: 10px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.menu-container{
+  border:1px solid #e6e6e6;
+}
+
+.sub-menu-title {
+  margin-bottom: 10px;
+  line-height: 1.2;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.menu-section-content{
+  background-color: white;
+  padding: 10px;
+}
+
+.menu-tabs{
+  display: flex;
+}
+
+.menu-tabs div{
+  flex-grow: 1;
+  text-align: center;
+  height: 35px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  border:1px solid #e6e6e6;
+  border-right: none;
+  border-top: none;
+}
+
+.menu-tabs div:first-child{
+  border-left: none;
+}

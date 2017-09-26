@@ -1,0 +1,28 @@
+.sub-menu-buttons{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  height: 47px;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.sub-menu-button{
+  float: left;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  text-align: center;
+}
+
+.sub-menu-button a{
+  width: 100%;
+  text-decoration: none;
+  color: orange;
+}

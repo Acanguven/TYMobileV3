@@ -1,0 +1,20 @@
+class {
+  onCreate(){
+    this.state = {
+      menuVisible: false
+    }
+  }
+  menuToggle(){
+    this.state.menuVisible = !this.state.menuVisible;
+  }
+}
+
+<div.header>
+  <img.logo src="./ty-logo.png"/>
+  <button.menu-button on-click('menuToggle')>
+    <div class=(state.menuVisible ? 'menu-cross' : 'menu-lines')/>
+  </button>
+  <if(state.menuVisible)>
+    <sidebar/>
+  </if>
+</div>
