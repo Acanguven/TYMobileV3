@@ -1,7 +1,19 @@
+class {
+  onCreate(){
+    this.state = {
+      selectedTab: 0
+    }
+  }
+}
+
 <html-container>
-  <@title>Trendyol | Butikler</@title>
+  <@title>Trendyol | ${input.currentPage}</@title>
   <@body-content>
     <header-component/>
-    <boutique-list-tabs/>
+    <await(boutiqeTabList from data.boutiqueTabsProvider)>
+      <await-error>:(</await-error>
+      <boutique-list-tabs tabs=boutiqeTabList.tabs selected=state.selectedTab/>
+      <boutique-list-items boutiques=boutiqeTabList.boutiques[0]/>
+    </await>
   </@body-content>
 </html-container>

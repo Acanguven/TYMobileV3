@@ -8,20 +8,22 @@ Cacher.prototype.fetch = function(url){
   var self = this;
   return new Promise(function(resolve, reject){
     if(self.cacheData[url]){
-      console.log('serving from cache:'+ url)
-      resolve(self.cacheData[url]);
+      resolve({data:self.cacheData[url], cache: true});
     }else{
       nodeFetch(url).then(function(res){
         return res.json();
        }).then(function(json){
-        console.log('Caching:'+ url)
         self.cacheData[url] = json;
-        resolve(json);
+        resolve({data:json, cache: false});
        }).catch(function(err){
         reject(err);
        });
      }
   });
+}
+
+Cacher.prototype.cacheSync = function(key, value){
+  this.cacheData[key] = value;
 }
 
 module.exports = new Cacher();

@@ -1,0 +1,13 @@
+class {
+  onCreate(){
+
+  }
+}
+
+macro boutique-list-box(boutiqueDetail)
+  div.boutique-list-box
+    img src="https://www.trendyol.com"+boutiqueDetail.img
+
+div.boutique-list
+  for(boutique in input.boutiques)
+    boutique-list-box({img:boutique.Image.DetailImage})

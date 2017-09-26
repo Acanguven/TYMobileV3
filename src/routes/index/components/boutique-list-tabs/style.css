@@ -22,5 +22,13 @@
 
 .category-menu ul li{
   display: inline;
-  margin: 10px;
+  margin: 16px;
+}
+
+.category-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.category-menu ul li span.selected{
+  color: orange;
 }

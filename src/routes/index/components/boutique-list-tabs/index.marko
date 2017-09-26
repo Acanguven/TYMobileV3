@@ -1,6 +1,16 @@
-$ var list = ['bla', 'bla2'];
+class {
+  onCreate(){
+    console.log('module ready');
+  }
+  changeTab(i){
+    console.log(arguments);
+  }
+}
 
-div.category-menu
-  ul
-    li for(tab in list)
-      span -- ${tab}
+<div.category-menu>
+  <ul>
+    <li for(tab in input.tabs | status-var=loop) on-click('changeTab', loop.getIndex())>
+      <span class=(input.selectedIndex == loop.getIndex() && 'selected')>${tab.Name}</span>
+    </li>
+  </ul>
+</div>
