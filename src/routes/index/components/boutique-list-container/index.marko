@@ -11,7 +11,5 @@ class {
 }
 
 
-<div>
-  <boutique-list-tabs tabs=input.boutiqueListData.tabs selected=state.selectedTab on-tabchange('changeTab')/>
-  <boutique-list-items boutiques=input.boutiqueListData.boutiques tabIndex=state.selectedTab/>
-</div>
+<boutique-list-tabs tabs=input.boutiqueListData.tabs selected=state.selectedTab on-tabchange('changeTab')/>
+<boutique-list-items boutiques=input.boutiqueListData.boutiques tabIndex=state.selectedTab/>

@@ -2,7 +2,7 @@
   <@title>Trendyol | ${data.currentPage}</@title>
   <@body-content>
     <header-component/>
-    <await(boutiqeTabList from data.boutiqueTabsProvider) client-reorder>
+    <await(boutiqeTabList from data.boutiqueTabsProvider)>
       <boutique-list-container boutiqueListData=boutiqeTabList/>
     </await>
   </@body-content>
