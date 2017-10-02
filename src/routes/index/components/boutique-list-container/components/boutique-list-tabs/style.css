@@ -6,6 +6,7 @@
   box-sizing: border-box;
   background-color: white;
   line-height: 44px;
+  overflow:auto;
 }
 
 .category-menu span{

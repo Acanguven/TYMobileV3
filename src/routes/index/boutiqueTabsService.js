@@ -26,9 +26,12 @@ function buildViewModel(data){
   }, []);
   model.boutiques = data.TabbedBoutiques.reduce(function(tabList, tabbedBoutique){
     tabList.push(tabbedBoutique.Boutiques.slice(0, 6).reduce(function(tabList, boutiqueTab){
-      var boutiqueDetail = boutiqueTab;
-      boutiqueDetail.BeautifiedName = boutiqueDetail.BoutiqueName.replace(/ /g,'-');
-      tabList.push(boutiqueDetail);
+      var boutiqueModel = {
+        beautifiedName: boutiqueTab.BoutiqueName.replace(/ /g,'-'),
+        boutiqueId: boutiqueTab.BoutiqueId,
+        image: boutiqueTab.Image.DetailImage
+      }
+      tabList.push(boutiqueModel);
       return tabList;
     }, []));
     return tabList;

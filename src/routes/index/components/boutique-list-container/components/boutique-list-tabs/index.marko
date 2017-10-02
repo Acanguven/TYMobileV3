@@ -9,7 +9,7 @@ class {
 
 <div.category-menu>
   <ul>
-    <li for(tab in input.tabs | status-var=loop) on-click('changeTab', loop.getIndex())>
+    <li for(tab in input.tabs | status-var=loop) on-click('changeTab', loop.getIndex()) class='tab-'+loop.getIndex()>
       <span class=(input.selected == loop.getIndex() && 'selected')>${tab.Name}</span>
     </li>
   </ul>

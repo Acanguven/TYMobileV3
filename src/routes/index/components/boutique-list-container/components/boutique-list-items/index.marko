@@ -9,9 +9,9 @@
 <div.boutique-list>
   <for(boutique in input.boutiques[input.tabIndex])>
     <boutique-list-box({
-      img:boutique.Image.DetailImage,
-      id:boutique.BoutiqueId,
-      name: boutique.BeautifiedName
+      img:boutique.image,
+      id:boutique.boutiqueId,
+      name: boutique.beautifiedName
     })/>
   </for>
 </div>

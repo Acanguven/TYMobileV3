@@ -9,10 +9,13 @@ class {
 
   changeTab(i){
     this.state.selectedTab = i;
+    var targetElement = document.querySelector('.tab-'+i);
+    this.container.scrollLeft = targetElement.offsetLeft - (this.container.offsetWidth / 2) + (targetElement.offsetWidth / 2);
   }
 
   onMount(){
     document.addEventListener('scroll', this.detectPageBottom.bind(this));
+    this.container = document.querySelector('.category-menu');
     this.swipeHandler();
   }
 
@@ -30,11 +33,11 @@ class {
   swipeDirectionHandler(left){
     if(left){
       if(this.state.selectedTab < this.state.tabs.length - 1){
-        this.state.selectedTab++;
+        this.changeTab(this.state.selectedTab + 1);
       }
     }else{
       if(this.state.selectedTab > 0){
-        this.state.selectedTab--;
+        this.changeTab(this.state.selectedTab - 1);
       }
     }
   }
