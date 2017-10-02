@@ -9,14 +9,15 @@ npm install
 
 ## Starting the server
 
+### Development Mode
 ```bash
-npm start
+npm run dev
 ```
 
-Start the server in production mode (minification enabled, etc.):
-
+### Production Mode
+production mode (minification enabled, bunding, etc.)
 ```bash
-NODE_ENV=production npm start
+npm run prod
 ```
 
 ## Build a static site
@@ -49,4 +50,3 @@ Learn to create components that can be passed content and include that content i
 ### Styles and Images
 
 Learn how to use styles within a component and how to use resources (like images) in a component.
-
