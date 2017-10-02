@@ -9,5 +9,5 @@ macro boutique-list-box(boutiqueDetail)
     img src="https://www.trendyol.com"+boutiqueDetail.img
 
 div.boutique-list
-  for(boutique in input.boutiques)
+  for(boutique in input.boutiques[input.tabIndex])
     boutique-list-box({img:boutique.Image.DetailImage})

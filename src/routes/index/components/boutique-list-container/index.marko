@@ -1,0 +1,17 @@
+class {
+  onCreate(){
+    this.state = {
+      selectedTab: 0,
+    }
+  }
+
+  changeTab(i){
+    this.state.selectedTab = i;
+  }
+}
+
+
+<div>
+  <boutique-list-tabs tabs=input.boutiqueListData.tabs selected=state.selectedTab on-tabchange('changeTab')/>
+  <boutique-list-items boutiques=input.boutiqueListData.boutiques tabIndex=state.selectedTab/>
+</div>

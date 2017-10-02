@@ -3,7 +3,6 @@ var cacheRequest = require('~/src/helpers/cache.js');
 function BoutiqueTabsService(){}
 
 BoutiqueTabsService.prototype.get = function (cb) {
-  var self = this;
   var url = 'https://api.trendyol.com/catalog/boutique/tabbed?includeRushDeliveryTab=true&storefrontId=1';
   cacheRequest.fetch(url).then(function(res){
     if(res.cache){
@@ -14,7 +13,7 @@ BoutiqueTabsService.prototype.get = function (cb) {
       cb(null, viewModel);
     }
   });
-}
+};
 
 function buildViewModel(data){
   var model = {

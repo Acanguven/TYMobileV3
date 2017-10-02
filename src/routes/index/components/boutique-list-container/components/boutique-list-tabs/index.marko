@@ -1,9 +1,9 @@
 class {
   onCreate(){
-    console.log('module ready');
+
   }
   changeTab(i){
-    console.log(arguments);
+    this.emit('tabchange', i);
   }
 }
 

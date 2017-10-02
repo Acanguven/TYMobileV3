@@ -1,19 +1,9 @@
-class {
-  onCreate(){
-    this.state = {
-      selectedTab: 0
-    }
-  }
-}
-
 <html-container>
-  <@title>Trendyol | ${input.currentPage}</@title>
+  <@title>Trendyol | ${data.currentPage}</@title>
   <@body-content>
     <header-component/>
-    <await(boutiqeTabList from data.boutiqueTabsProvider)>
-      <await-error>:(</await-error>
-      <boutique-list-tabs tabs=boutiqeTabList.tabs selected=state.selectedTab/>
-      <boutique-list-items boutiques=boutiqeTabList.boutiques[0]/>
+    <await(boutiqeTabList from data.boutiqueTabsProvider) client-reorder>
+      <boutique-list-container boutiqueListData=boutiqeTabList/>
     </await>
   </@body-content>
 </html-container>
