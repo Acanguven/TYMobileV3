@@ -12,3 +12,6 @@ dump.rdb
 .idea
 .gitignore
 s/
+.marko-cli
+.nyc_output
+coverage/
