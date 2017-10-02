@@ -25,9 +25,15 @@ function buildViewModel(data){
     return tabList;
   }, []);
   model.boutiques = data.TabbedBoutiques.reduce(function(tabList, tabbedBoutique){
-    tabList.push(tabbedBoutique.Boutiques.slice(0, 6));
+    tabList.push(tabbedBoutique.Boutiques.slice(0, 6).reduce(function(tabList, boutiqueTab){
+      var boutiqueDetail = boutiqueTab;
+      boutiqueDetail.BeautifiedName = boutiqueDetail.BoutiqueName.replace(/ /g,'-');
+      tabList.push(boutiqueDetail);
+      return tabList;
+    }, []));
     return tabList;
   }, []);
+
   return model;
 }
 

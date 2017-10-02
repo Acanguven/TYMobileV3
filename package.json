@@ -8,6 +8,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "cross-env": "^5.0.5",
     "eslint": "^4.2.0",
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-prettier": "^2.1.2",
@@ -25,7 +26,9 @@
     "serve-static": "NODE_ENV=production marko-starter serve-static",
     "lint": "eslint src/",
     "test": "npm run lint",
-    "prettier": "prettier src/**/*.{js,css,less} *.js --write"
+    "prettier": "prettier src/**/*.{js,css,less} *.js --write",
+    "dev": "cross-env NODE_ENV=\"development\" marko-starter server",
+	"prod": "cross-env NODE_ENV=\"production\" marko-starter server"
   },
   "eslintConfig": {
     "extends": [

@@ -1,10 +1,16 @@
 .category-menu{
   height: 44px;
   margin: 0;
-  padding: 10px 0;
   overflow-x: scroll;
   clear: both;
   box-sizing: border-box;
+  background-color: white;
+  line-height: 44px;
+}
+
+.category-menu span{
+  height: 100%;
+  display: inline-block;
 }
 
 .category-menu ul{

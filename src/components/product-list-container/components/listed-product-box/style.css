@@ -1,0 +1,28 @@
+.listed-product-box{
+  margin-bottom: 12px;
+  border: 1px solid #e6e6e6;
+  display: inline-block;
+  height: 394px;
+  text-align: center;
+  background-color: white;
+  position: relative;
+}
+
+.listed-product-box img{
+  width: 100%;
+}
+
+.listed-product-box .product-info{
+  padding: 13px;
+  font-weight: 500;
+}
+
+.listed-product-box .product-price{
+  color: #f27a1a;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  border-top: 1px solid #e6e6e6;
+}

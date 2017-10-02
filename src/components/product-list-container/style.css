@@ -1,0 +1,14 @@
+.product-list-container{
+  padding: 0px 10px;
+}
+
+.product-list-container .listed-product-box{
+  width: calc(50% - 8px);
+}
+
+.product-list-container .listed-product-box:nth-child(2n + 1){
+  float: left;
+}
+.product-list-container .listed-product-box:nth-child(2n + 2){
+  float: right;
+}

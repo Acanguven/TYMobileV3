@@ -1,0 +1,14 @@
+.search-filter{
+  margin: 15px 10px;
+  background-color: white;
+  height: 49px;
+  box-sizing: border-box;
+  border: 1px solid #e6e6e6;
+}
+
+.search-filter div{
+  float: left;
+  width: 50%;
+  text-align: center;
+  line-height: 49px;
+}

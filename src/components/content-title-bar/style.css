@@ -1,0 +1,12 @@
+.content-title-bar{
+  height: 43px;
+  text-align: center;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
