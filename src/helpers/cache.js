@@ -20,10 +20,10 @@ Cacher.prototype.fetch = function(url){
        });
      }
   });
-}
+};
 
 Cacher.prototype.cacheSync = function(key, value){
   this.cacheData[key] = value;
-}
+};
 
 module.exports = new Cacher();

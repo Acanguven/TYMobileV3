@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><include(input.title)/></title>
-  <meta-tags/>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-  <link rel="shortcut icon" href="./favicon.ico">
-  <include(input.headerScripts)/>
-  <include(input.headerStyles)/>
+    <title><include(input.title)/></title>
+    <meta-tags/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <lasso-resource path="./favicon.ico" var="favicon"/>
+    <link rel="shortcut icon" href=favicon.url>
+    <include(input.headerScripts)/>
+    <include(input.headerStyles)/>
+    <lasso-head/>
 </head>
 <body>
-  <include(input.bodyContent)/>
-  <include(input.bodyScripts)/>
+    <lasso-body/>
+    <include(input.bodyContent)/>
+    <include(input.bodyScripts)/>
 </body>
 </html>

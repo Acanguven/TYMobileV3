@@ -44,8 +44,8 @@ class {
 
   swipeHandler(){
     var self = this;
-    document.querySelector('.boutique-list-box').addEventListener('touchstart', handleTouchStart, false);
-    document.querySelector('.boutique-list-box').addEventListener('touchmove', handleTouchMove, false);
+    document.getElementById('swipe').addEventListener('touchstart', handleTouchStart, false);
+    document.getElementById('swipe').addEventListener('touchmove', handleTouchMove, false);
 
     var xDown = null;
     var yDown = null;
@@ -76,5 +76,7 @@ class {
 
 <div>
   <boutique-list-tabs tabs=state.tabs selected=state.selectedTab on-tabchange('changeTab')/>
-  <boutique-list-items boutiques=state.boutiques tabIndex=state.selectedTab/>
+  <div#swipe>
+    <boutique-list-items boutiques=state.boutiques tabIndex=state.selectedTab/>
+  </div>
 </div>
