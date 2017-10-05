@@ -17,8 +17,8 @@
     "browser-refresh": "^1.7.2"
   },
   "scripts": {
-    "prod": "set NODE_ENV=production&& node server_root.js",
-    "dev": "set NODE_ENV=development&& browser-refresh server_root.js",
+    "prod": "set NODE_ENV=production&& node server.js",
+    "dev": "set NODE_ENV=development&& browser-refresh server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
