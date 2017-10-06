@@ -1,0 +1,9 @@
+<html-container>
+  <@title>Trendyol | ${data.currentPage}</@title>
+  <@body-content>
+    <header-component/>
+    <await (productDetailData from data.productDetailProvider)>
+      Loaded
+    </await>
+  </@body-content>
+</html-container>
