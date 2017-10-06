@@ -4,8 +4,11 @@ var boutiqueTabsService = require('./boutiqueTabsService.js');
 module.exports = function (req, res) {
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
 
-    template.render({
+    res.locals.tada = 'boom';
+
+    res.marko(template,{
         boutiqueTabsProvider: boutiqueTabsService.get,
-        currentPage: 'HomePage'
-    }, res);
+        currentPage: __('title'),
+        __:'t'
+    });
 };

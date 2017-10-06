@@ -3,7 +3,7 @@
   <@body-content>
     <header-component/>
     <await (productDetailData from data.productDetailProvider)>
-      Loaded
+      <product-detail-container productData=productDetailData/>
     </await>
   </@body-content>
 </html-container>

@@ -1,10 +1,12 @@
 <div.listed-product-box>
-  <img src=input.cdnPath + input.product.imageUrl/>
-  <div.product-info>
-    <div>${input.product.brandName}</div>
-    <div>${input.product.name}</div>
-  </div>
-  <div.product-price>
-      ${input.product.marketPrice}
-  </div>
+  <a href="/"+input.product.name + "/urundetay/" + input.boutiqueId + "/" + input.product.id>
+    <img src=input.cdnPath + input.product.imageUrl/>
+    <div.product-info>
+      <div>${input.product.brandName}</div>
+      <div>${input.product.name}</div>
+    </div>
+    <div.product-price>
+        ${input.product.marketPrice}
+    </div>
+  </a>
 </div>

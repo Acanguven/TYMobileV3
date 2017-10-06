@@ -5,8 +5,8 @@ var BoutiqueDetailService = require('./boutiqueDetailService.js');
 module.exports = function (req, res) {
     res.setHeader('content-type', 'text/html');
 
-    template.render({
+    res.marko(template,{
         currentPage: 'Butikdetay',
-        boutiqueDetailProvider: BoutiqueDetailService.id(req.params.boutiqueId)
-    }, res);
+        boutiqueDetailProvider: BoutiqueDetailService.id(req.params.boutiqueId),
+    });
 };

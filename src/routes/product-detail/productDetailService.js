@@ -28,14 +28,15 @@ ProductDetailService.prototype.id = function (productId, boutiqueId) {
 function buildViewModel(data) {
   var model = {
     productId: data.Product.Id,
-    name: data.Product.Name,
+    productName: data.Product.Name,
     marketPrice: data.Product.MarketPrice,
     salePrice: data.Product.SalePrice,
     variants: data.Product.ProductVariants,
-
   };
 
-  return data;
+
+
+  return model;
 }
 
 module.exports = new ProductDetailService();
